@@ -1,4 +1,4 @@
-# FranzBoot
+# FranzBoot - Gravação do bootloader MicroNucleus no ATtiny85 - **BETA***
 
 Programa para gravação do bootloader micronucleus para Franzininho DIY usando Arduino UNO
 
@@ -7,10 +7,7 @@ Desenvolvido por Limor Fried e Bill Westfield. Adaptado em 03/02/2021 por [Danie
 
 ## Instruções
 
-Gravação do bootloader MicroNucleus no ATtiny85 -  B E T A
------------------------------------------------    =======
-
-Material necessário:
+### Material necessário:
 
 - Micro com a IDE Arduino
 - Arduino UNO
@@ -19,7 +16,7 @@ Material necessário:
 - Fios para conexão
 - Botão e 2 LEDs (opcional, para operação sem micro após a carga do sketch)
 
-Preparação do Arduino
+### Preparação do Arduino
 
 - Se ainda não fez isso, baixe o FranzBoot.zip e expanda no diretório de sketches
 - Abra o sketch FranzBoot na IDE do Arduino
@@ -28,12 +25,13 @@ Preparação do Arduino
 - Compile o sketch e carregue no Arduino
 - Deslige o Arduino do PC
 
-Preparação do ATtiny
+### Preparação do ATtiny
 
 - coloque o ATtiny na protoboard e faça as conexões indicadas abaixo:
 
 ![circuito](circuito-para-gravar.png)
 
+```
   Arduino     ATtiny
   10          1                  +-----+
   GND         4                1 |.    | 8
@@ -41,14 +39,14 @@ Preparação do ATtiny
   12          6                3 |.    | 6
   13          7                4 |.    | 5
   +5V         8                  +-----+
-
-Preparação para gravação sem PC
+```
+### Preparação para gravação sem PC
 
 - Ligue um botão entre o pino 10 e GND
 - Ligue um resistor de 1K em série com um LED vermelho entre o pino 8 do Arduino e GND
 - Ligue um resistor de 1K em série com um LED verde entre o pino 7 do Arduino e GND
 
-Gravação usando o PC
+### Gravação usando o PC
 
 - Conecte o Arduino ao PC
 - Abra o monitor serial na IDE do Arduino (lupa no alto à direita)
@@ -56,6 +54,7 @@ Gravação usando o PC
 - Digite G e enviar
 - Devem ser apresentadas as mensagens abaixo
 
+```
    Gravador de Bootloader no Franzininho DIY!
 
    Digite 'G' ou aperte o botao para gravar...
@@ -66,8 +65,9 @@ Gravação usando o PC
    SUCESSO!
 
    Pressione RESET para gravar outro chip
+```
 
-Gravação sem PC
+### Gravação sem PC
 
 - Alimente o Arduino
 - Pressione o botão
